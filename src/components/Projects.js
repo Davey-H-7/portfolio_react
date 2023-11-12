@@ -1,11 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 const ProjectsDiv = styled.div`
 display: flex;
 justify-content: space-around;
-background-color: darkorange;
-height: auto;
+background-color: rgb(249, 148, 23);
+height: 100vh;
 padding: 0 0 0 5px;
 gap: 5px;
 `
@@ -19,6 +20,8 @@ const Project = styled.section`
 display: flex;
 border-top: 2px solid black;
 gap: 10px;
+background-color:rgb(54, 48, 98);
+color:white;
 `
 
 const ProjectAlt = styled.section`
@@ -41,11 +44,36 @@ const ProjectImg = styled.img`
     box-sizing: border-box;
 `
 
+const Button = styled.button`
+background-color: rgb(54, 48, 98);
+color:white;
+padding: 1em;
+border-radius: 8px;
+border-style: none;
+margin: 1em;
+font-size: 1.5em;
+
+&:hover {
+background-color: rgb(54, 48, 150);
+}
+`
+
+
+
+
 const Projects = () => {
+
+    const navigate = useNavigate();
+
+    const handleHome =() => {
+    navigate('/')  
+    }
+
     return ( 
+        <>
         <ProjectsDiv>
         <article>
-        <Title> Stuff Dave Made </Title>
+        <Title> My Proudest Projects </Title>
         
 
         <Project>
@@ -71,7 +99,10 @@ const Projects = () => {
 
 
         </article>
+       
         </ProjectsDiv>
+         <Button onClick = {handleHome}>Back to Home</Button>
+         </>
      );
 }
  

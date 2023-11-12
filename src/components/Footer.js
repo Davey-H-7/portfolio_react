@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.div`
-background-color: darkmagenta;
+background-color: rgb(249, 148, 23);
 margin: 0;
 padding-bottom: 0;
 text-decoration: none;
@@ -25,12 +25,12 @@ const SocialLinks = styled.div`
 list-style-type: none;
 display:flex;
 justify-content: space-evenly;
-
 `
 
 const Social = styled.img`
 max-width: 50px;
-border: none;`
+border: none;
+`
 
 
 const Footer = () => {

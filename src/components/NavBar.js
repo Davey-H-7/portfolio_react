@@ -6,17 +6,18 @@ const NavLinks = styled.div`
 list-style-type: none;
 display:flex;
 justify-content: space-evenly;
-background-color: darkmagenta;
+background-color: rgb(54, 48, 98);
 margin: 0;
 padding: 1em;
 text-decoration: none;
 border-bottom: 3px solid black;
+height: 5vh;
 `
 
 const StyledLink = styled(Link)`
 text-decoration: none;
 color: white;
-padding: 1em;
+font-size: 3em;
 
 &:hover {
 background-color: darkblue;

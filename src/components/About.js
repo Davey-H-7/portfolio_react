@@ -1,14 +1,15 @@
 import React from 'react';
 import { styled } from 'styled-components';
 
+
 const AboutDiv = styled.div`
+color: white;
+font-size: 1.5em;
 display: flex;
 justify-content: space-around;
-background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,145,2,1) 76%, rgba(235,124,4,1) 100%);
 height: auto;
-padding: 0 0 0 5px;
 gap: 5px;
+background-color:rgb(54, 48, 98);
 
 @media(max-width: 768px) {
     flex-direction: column;
@@ -18,50 +19,37 @@ gap: 5px;
 }
 `
 
-const Title = styled.h1`
-text-align: center;
-`
-
 const AboutSec = styled.section`
-border-top: 1px solid black;
+margin: 0 0 5% 2%; 
 `
 
-const AboutImg = styled.img`
-    width: 350px;
-    object-fit: cover;
-    border: 3px solid black;
-    line-height: 0;
-    margin: 50px 0 50px 0;
-    box-sizing: border-box;
-`
+
 
 const About = () => {
     return ( 
+        <>
         <AboutDiv>
         <article>
-        <Title> About me </Title>
 
         <AboutSec>
-        <h3> Coding Journey </h3>
-        <p> In June 2023 I joined CodeClan's Professional Software Development course where I found my passion for coding.</p>  
-        <p> The liquidation of CodeClan during my second week of the course only fueled my determination to carry on, thankfully I was able to continue my studies under CodeBase and have to date completed 8 of the 16 weeks.  </p>
-        <p> During this time I have built several full stack apps using Python, Javascript, React, HTML, CSS and PostGreSQL. Some examples of my work can be found under the projects tab.  </p>
+        <h3> My Coding Journey </h3>
+        <p> Having dabbled in coding in the past, In June 2023 I made the life-altering decision to join CodeClan's Professional Software Development course seeking new challenges and an exciting career in tech. There I immediately found my passion and a natural ability for coding.</p>  
+        <p> The liquidation of CodeClan during my second week of the course only fueled my determination to carry on. At this point I was set on teaching myself the course materials in order to not give up on this path I had so recently begun. Thankfully CodeBase stepped in to take over running of the course and I was able to carry on with the CodeClan cirriculum under the tutelage of same excellent instructors.  </p>
+        <p> To date I have completed a rollercoaster 13 weeks of the 16 week course. During this time I have built several full stack apps using languages such as Python, Javascript and Java with frameworks on Spring and Flask as well as MongoDB and PostGreSQL databases and built front-ends with React, HTML & CSS. I have also gained experience working with industry techniques such as daily stand-ups, pair & mob programming, remote working and Test-Driven Development.   </p>
         </AboutSec>
         <AboutSec>
         <h3> Past experience</h3>
-        <p> Prior to venturing into software development I was an Electrical Engineer within a consultancy focusing on building services.</p>
-        <p> My day-to-day here including crafting designs for a range of electrical services including lighting & fire alarms, collaborating with other teams within and external to my company and dealing with technical queries</p>
+        <p> Prior to venturing into software development I was an Electrical Engineer within a consultancy focusing on building services. My day-to-day here including crafting designs for a range of electrical services including lighting & fire alarms, collaborating on projects with colleagues and other teams and balancing multiple deadlines while also dealing with technical queries for ongoing projects.</p>
         </AboutSec>
         <AboutSec>
         <h3> Personal Life</h3>
-        <p> Outside of work and coding I am an active member of Glasgow's Dodgeball team, <a href = 'https://www.instagram.com/kelvinrapids/?hl=en'>Kelvin Rapids</a>, regularly representing the team at leagues and tournaments and for which I am an event's prganiser and the team's Wellness Officer.</p>
-        <p>I also have had a lifelong obsession with gaming and have in the past, livestreamed on Twitch and written for gaming website, GodisaGeek. You can see some of my favourite games here. </p>
+        <p> When I'm not coding I am an active member of Glasgow's Dodgeball team, <a href = 'https://www.instagram.com/kelvinrapids/?hl=en'>Kelvin Rapids</a>, regularly representing the team at leagues and tournaments and for which I am an events oprganiser and the team's Wellness Officer. Yes, it is a bit like the film but I've seen no pirates so far.</p>
+        <p>I also have had a lifelong obsession with gaming and have in the past, livestreamed on Twitch and written for gaming website, GodisaGeek. You can see some of my favourite and recent games on my backloggd <a href ='https://www.backloggd.com/u/Davey_H/'>here.</a> </p>
         </AboutSec>
         </article>
-
-        <AboutImg src = {require("../images/me.jpg")} alt ='a handsome bespectacled man in a blue suit with a floral orange tie'/>
         
         </AboutDiv>
+        </>
      );
 }
  

@@ -1,30 +1,29 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import NavBar from '../components/NavBar';
 import styled from 'styled-components'
 import About from '../components/About';
 import Footer from '../components/Footer';
 import Projects from '../components/Projects';
+import Header from '../components/Header';
 
-const Construction = styled.h1`
-text-align: center;
+const ContainerDiv = styled.div`
+width:100vw;
 `
+
 
 
 const PortfolioContainer = () => {
 
     return ( 
-        <>
-        <Construction> &#128679; Site under construction &#128679; </Construction>
+        <ContainerDiv>
         <Router>
-            <NavBar/>
                 <Routes>
-                    <Route path ="/" element ={<About/>} />
+                    <Route path ="/" element ={<Header/>} />
+                    <Route path = "/about" element = {<About/>}/>
                     <Route path ="/projects" element ={<Projects/>} />
                 </Routes>
-            <Footer/>
         </Router>
-        </>
+        </ContainerDiv>
      );
 }
  
